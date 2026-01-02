@@ -6,18 +6,11 @@ A serverless data processing project built using AWS S3, AWS Lambda, and IAM. Th
 <img width="1600" height="900" alt="Untitled design(1)" src="https://github.com/user-attachments/assets/a4d2d2b5-067b-46ae-b327-001d937f0143" />
 
 
-User uploads CSV file
-        ↓
-AWS S3 Bucket (Input)
-        ↓
-S3 Event Trigger
-        ↓
-AWS Lambda Function (Python)
-        ↓
-IAM Role (Permissions: S3 Read/Write, CloudWatch Logs)
-        ↓
-CSV Data Processing (Read, Transform, Validate)
-        ↓
-Processed Output Stored in S3 (Output Bucket)
-        ↓
-Logs & Monitoring via CloudWatch
+## Project Workflow
+
+User uploads a CSV file to an S3 bucket  
+→ S3 event triggers a Lambda function  
+→ Lambda uses IAM role permissions  
+→ CSV file is processed using Python  
+→ Transformed data is stored back in S3  
+→ Execution logs are captured in CloudWatch
